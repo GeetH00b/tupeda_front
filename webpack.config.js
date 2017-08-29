@@ -3,7 +3,7 @@ const path = require('path')
 module.exports = {
   entry: './src/index.js',
   output: {
-    path: path.join(__dirname + 'dist'),
+    path: path.join(__dirname, 'dist'),
     filename: 'bundle.js'
   },
   module: {
@@ -14,7 +14,7 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['es2015']
+            presets: ['env']
           }
         }
       }
